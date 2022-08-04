@@ -1,0 +1,33 @@
+<h1>Data Binding</h1>
+<h2>{{ class1 }}</h2>
+<p>Nessa aula aprendemos sobre {{ class1 }}.</p>
+<p>
+  Essa é soma de {{ num }} + 4 e o resultado via interpolação é = {{ num + 4 }}.
+</p>
+<br />
+
+<h2>{{ class2 }}</h2>
+<p>Nessa aula aprendemos sobre {{ class2 }}.</p>
+<p>
+  O botão esquerdo está desabilitado via parâmetro HTML e o da direita via
+  {{ class2 }}.
+</p>
+<button disabled="true">BOTÃO</button>
+<button [disabled]="checkedDisabled">BOTÃO</button>
+<br /><br /><br />
+
+<h2>{{ class3 }}</h2>
+<p>Nessa aula aprendemos sobre {{ class3 }}.</p>
+<p>Passe o mouse no quadro abaixo e descubra sua posição!</p>
+<div
+  (mousemove)="getPosition($event)"
+  style="background-color: grey; width: 140px; height: 100px"
+></div>
+<p>{{ position.x }} - {{ position.y }}</p>
+<button (click)="throwEvent($event)">DISPARAR EVENTO</button>
+<br /><br /><br />
+
+<h2>{{ class4 }}</h2>
+<p>Nessa aula aprendemos sobre {{ class4 }}.</p>
+<input [(ngModel)]="name" />
+<p>{{ name }}</p>
