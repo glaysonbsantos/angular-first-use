@@ -17,11 +17,18 @@ import { Component, OnInit } from '@angular/core';
     <button class="btn" (click)="addValue()">+</button>
     <button class="btn" (click)="subValue()">-</button>
     <button class="btn" (click)="clearValue()">AC</button>
+
+    <app-output (sendData)="setData($event)"></app-output>
+    <ng-template [ngIf]="getData">
+      <h3>{{ getData.nome }} - {{ getData.idade }} anos</h3>
+    </ng-template>
+
     <router-outlet></router-outlet>
   `,
 })
 export class AppComponent implements OnInit {
   public value: number = 0;
+  public getData: { nome: string; idade: number } | undefined;
 
   constructor() {}
   ngOnInit(): void {}
@@ -34,5 +41,9 @@ export class AppComponent implements OnInit {
   }
   public clearValue() {
     this.value = 0;
+  }
+
+  public setData(event: { nome: string; idade: number }) {
+    this.getData = event;
   }
 }
