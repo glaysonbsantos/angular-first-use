@@ -5,7 +5,14 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <!-- <app-title></app-title> -->
     <!-- <app-data-biding></app-data-biding> -->
-    <app-diretivas-estruturais></app-diretivas-estruturais>
+    <!-- <app-diretivas-estruturais></app-diretivas-estruturais> -->
+    <!-- <app-diretivas-atributos>
+      <h1>Diretivas Atributos</h1>
+      <h2>ngContent</h2>
+      <p>Esse conteúdo foi inserido via ng-content!</p>
+      <hr />
+    </app-diretivas-atributos> -->
+
     <router-outlet></router-outlet>
   `,
 })

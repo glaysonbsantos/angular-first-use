@@ -1,0 +1,34 @@
+<ng-content select="h1"></ng-content>
+<div *ngIf="nome != 'stop'">
+  <h2>ngClass</h2>
+  <p [ngClass]="{ active: valor, disabled: !valor }">Teste</p>
+  <br />
+
+  <h2>ngStyle</h2>
+  <p [ngStyle]="{ width: larguraPX, background: backGroundColor }">Teste</p>
+  <br />
+</div>
+
+<h2>ngModel</h2>
+<input [(ngModel)]="nome" placeholder="Insira um nome" />
+<br /><br />
+<button (click)="salvar()">SALVAR</button>
+<br /><br />
+<li *ngFor="let item of list">{{ item.nome }}</li>
+<br />
+
+<h2>ngTemplate</h2>
+<ng-template ngFor let-item [ngForOf]="list">
+  <p>
+    {{ item.nome }}
+  </p>
+</ng-template>
+<input [(ngModel)]="nome" placeholder="Insira um nome" />
+<br /><br />
+<button (click)="salvar()">SALVAR</button>
+<br /><br /><br />
+
+<ng-content select="h2"></ng-content>
+<ng-content select="p"></ng-content>
+
+<ng-content select="hr"></ng-content>
