@@ -13,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
       <hr />
     </app-diretivas-atributos> -->
 
+    <app-header></app-header>
     <router-outlet></router-outlet>
   `,
 })
